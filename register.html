@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Face</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Face Registration</h2>
+    <input type="text" id="name" placeholder="Your Name" /><br><br>
+    <input type="email" id="email" placeholder="Your Email" /><br><br>
+    <button id="capture-btn">Capture & Register</button><br><br>
+    <video id="video" width="320" height="240" autoplay muted style="border:1px solid black;"></video>
+    <p id="register-status">Status: Waiting...</p>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

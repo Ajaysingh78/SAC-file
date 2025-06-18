@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAC Attendance with Face Verification</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+  <!-- Face API -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>SAC Attendance System</h1>
+    <p id="status">Click below to start scanner</p>
+    <button id="start-btn">Start Scanner</button>
+
+    <div id="scanner-section" style="display: none;">
+      <video id="video" width="300" height="200" autoplay muted playsinline style="border: 1px solid gray;"></video>
+      <p id="qr-result">Waiting for QR code...</p>
+    </div>
+  </div>
+
+  <canvas id="canvas" hidden></canvas>
+
+  <!-- QR Scanner -->
+  <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
+  <!-- Your JS file -->
+  <script src="script.js"></script>
+</body>
+</html>
